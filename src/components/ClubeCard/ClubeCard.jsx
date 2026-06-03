@@ -8,7 +8,7 @@ function ClubeCard({ nome, caminhoImagem, anoFundacao, championsLeague, qtdChamp
       <p>Fundado em {anoFundacao}</p>
       <p>{championsLeague ? `Tem ${qtdChampionsLeague} títulos da Champions League.` : "Não tem Champions League."}</p>
       <a href={wikipediaLink} target="_blank" rel="noopener noreferrer">
-        <button>Ver na Wikipedia</button>
+        <button>🌐 Ver na Wikipedia</button>
       </a>
     </div>
   );
