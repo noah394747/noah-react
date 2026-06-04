@@ -1,6 +1,9 @@
 import "./ClubeCard.css";
+import { useNavigate } from "react-router-dom";
 
 function ClubeCard({ nome, caminhoImagem, anoFundacao, championsLeague, qtdChampionsLeague, wikipediaLink }) {
+  const navigate = useNavigate();
+
   return (
     <div className="CardClube">
       <img src={caminhoImagem} width={260} height={280} alt={nome} title={nome} />
@@ -10,6 +13,9 @@ function ClubeCard({ nome, caminhoImagem, anoFundacao, championsLeague, qtdChamp
       <a href={wikipediaLink} target="_blank" rel="noopener noreferrer">
         <button>🌐 Ver na Wikipedia</button>
       </a>
+      <button onClick={() => navigate(`/noah-react/${encodeURIComponent(nome)}`)}>
+        Ver detalhes
+      </button>
     </div>
   );
 }

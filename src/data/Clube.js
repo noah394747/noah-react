@@ -8,10 +8,10 @@ import TottenhamImagem from "../assets/tottenham.png";
 const Clube = {
   "Manchester City": { imagem: CityImagem },
   "Manchester United": { imagem: UnitedImagem },
-  Arsenal: { imagem: ArsenalImagem },
-  Chelsea: { imagem: ChelseaImagem },
-  Liverpool: { imagem: LiverpoolImagem },
-  Tottenham: { imagem: TottenhamImagem },
+  "Arsenal": { imagem: ArsenalImagem },
+  "Chelsea": { imagem: ChelseaImagem },
+  "Liverpool": { imagem: LiverpoolImagem },
+  "Tottenham": { imagem: TottenhamImagem },
 };
 
 export default Clube;
