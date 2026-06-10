@@ -6,7 +6,7 @@ import Clube from "../data/Clube";
 function Home() {
   const [listaClube] = useState([
     {
-        id: 1,
+      id: 1,
       nome: "Manchester City",
       caminhoImagem: Clube["Manchester City"].imagem,
       anoFundacao: 1880,
@@ -15,7 +15,7 @@ function Home() {
       wikipediaLink: "https://pt.wikipedia.org/wiki/Manchester_City_F.C.",
     },
     {
-        id: 2,
+      id: 2,
       nome: "Manchester United",
       caminhoImagem: Clube["Manchester United"].imagem,
       anoFundacao: 1878,
@@ -24,7 +24,7 @@ function Home() {
       wikipediaLink: "https://pt.wikipedia.org/wiki/Manchester_United_F.C.",
     },
     {
-        id: 3,
+      id: 3,
       nome: "Arsenal",
       caminhoImagem: Clube["Arsenal"].imagem,
       anoFundacao: 1886,
@@ -33,7 +33,7 @@ function Home() {
       wikipediaLink: "https://pt.wikipedia.org/wiki/Arsenal_F.C.",
     },
     {
-        id: 4,
+      id: 4,
       nome: "Chelsea",
       caminhoImagem: Clube["Chelsea"].imagem,
       anoFundacao: 1905,
@@ -42,7 +42,7 @@ function Home() {
       wikipediaLink: "https://pt.wikipedia.org/wiki/Chelsea_F.C.",
     },
     {
-        id: 5,
+      id: 5,
       nome: "Liverpool",
       caminhoImagem: Clube["Liverpool"].imagem,
       anoFundacao: 1892,
@@ -51,7 +51,7 @@ function Home() {
       wikipediaLink: "https://pt.wikipedia.org/wiki/Liverpool_F.C.",
     },
     {
-        id: 6,
+      id: 6,
       nome: "Tottenham",
       caminhoImagem: Clube["Tottenham"].imagem,
       anoFundacao: 1882,
@@ -78,6 +78,7 @@ function Home() {
             championsLeague={clube.championsLeague}
             qtdChampionsLeague={clube.qtdChampionsLeague}
             wikipediaLink={clube.wikipediaLink}
+            id={clube.id}
           />
         ))}
       </section>

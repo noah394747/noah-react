@@ -4,7 +4,7 @@ import clubes from "../data/Clube";
 function Clube() {
   const { clubeNome } = useParams();
 
-  const nome = decodeURIComponent(clubeNome); 
+  const nome = decodeURIComponent(clubeNome);
   const clube = clubes[nome];
 
   if (!clube) {
