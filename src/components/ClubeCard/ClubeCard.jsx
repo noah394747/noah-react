@@ -1,14 +1,7 @@
 import "./ClubeCard.css";
 import { useNavigate } from "react-router-dom";
 
-function ClubeCard({
-  nome,
-  caminhoImagem,
-  anoFundacao,
-  championsLeague,
-  qtdChampionsLeague,
-  wikipediaLink,
-}) {
+function ClubeCard({ nome, caminhoImagem, anoFundacao, championsLeague, qtdChampionsLeague, wikipediaLink }) {
   const navigate = useNavigate();
 
   return (
@@ -16,7 +9,7 @@ function ClubeCard({
       <div className="card-stripe" />
       <div className="card-body">
         <div className="club-crest">
-          <img src={caminhoImagem} width={64} height={64} alt={nome} />
+          <img src={caminhoImagem} width={64} height={64} alt={nome} loading="lazy" style={{ objectFit: "contain" }} />
         </div>
         <div className="club-info">
           <p className="club-name">{nome}</p>
@@ -33,20 +26,10 @@ function ClubeCard({
         </div>
       </div>
       <div className="card-actions">
-        <a
-          href={wikipediaLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-outline"
-          aria-label={"Ver " + nome + " na Wikipedia"}
-        >
+        <a href={wikipediaLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline" aria-label={"Ver " + nome + " na Wikipedia"}>
           🌐 Wikipedia
         </a>
-        <button
-          className="btn btn-solid"
-          onClick={() => navigate("/noah-react/" + encodeURIComponent(nome))}
-          aria-label={"Ver detalhes de " + nome}
-        >
+        <button className="btn btn-solid" onClick={() => navigate("/noah-react/" + encodeURIComponent(nome))} aria-label={"Ver detalhes de " + nome}>
           Ver detalhes
         </button>
       </div>
