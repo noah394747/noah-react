@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ClubeCard from "../components/ClubeCard/ClubeCard";
-import ClubeButton from "../components/ClubeButton/ClubeButton";
+
 import Clube from "../data/Clube";
 
 function Home() {
@@ -61,29 +61,30 @@ function Home() {
     },
   ]);
 
-  <ClubeButton onClick={() => alert("clicou!")} />;
 
-  return (
-    <>
-      <h1>BIG SIX!</h1>
-      <h2>{listaClube.length} clubes na página</h2>
+return (
+  <>
+    <h1>BIG SIX!</h1>
+    <h2>{listaClube.length} clubes na página</h2>
 
-      <section id="center">
-        {listaClube.map((clube, index) => (
-          <ClubeCard
-            key={index}
-            nome={clube.nome}
-            caminhoImagem={clube.caminhoImagem}
-            anoFundacao={clube.anoFundacao}
-            championsLeague={clube.championsLeague}
-            qtdChampionsLeague={clube.qtdChampionsLeague}
-            wikipediaLink={clube.wikipediaLink}
-            id={clube.id}
-          />
-        ))}
-      </section>
-    </>
-  );
+    
+
+    <section id="center">
+      {listaClube.map((clube) => (
+        <ClubeCard
+          key={clube.id}
+          nome={clube.nome}
+          caminhoImagem={clube.caminhoImagem}
+          anoFundacao={clube.anoFundacao}
+          championsLeague={clube.championsLeague}
+          qtdChampionsLeague={clube.qtdChampionsLeague}
+          wikipediaLink={clube.wikipediaLink}
+          id={clube.id}
+        />
+      ))}
+    </section>
+  </>
+);
 }
 
 export default Home;

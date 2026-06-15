@@ -6,10 +6,12 @@ import Clube from "./pages/Clube";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/noah-react/" element={<Home />} />
-        <Route path="/noah-react/:clubeNome" element={<Clube />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/noah-react/" element={<Home />} />
+          <Route path="/noah-react/:clubeNome" element={<Clube />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
