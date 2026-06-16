@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ClubeCard from "../components/ClubeCard/ClubeCard";
-
 import Clube from "../data/Clube";
 
 function Home() {
